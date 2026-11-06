@@ -1,0 +1,75 @@
+/* 카드 한 장과, 카드를 두 칸씩 놓는 틀 */
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.profile-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.profile-card .avatar {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile-card h3 {
+  margin: 0;
+}
+
+.profile-card .role {
+  margin: 4px 0 8px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.profile-card .count {
+  color: #5f6b7a;
+  font-size: 14px;
+}
+
+.profile-card .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-card button {
+  padding: 6px 12px;
+  white-space: nowrap;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #2563eb;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-card button:hover {
+  background: #eff6ff;
+}
+
+.profile-card.is-presenter {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #bfdbfe;
+}
+
+@media (max-width: 640px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
