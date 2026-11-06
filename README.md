@@ -11,6 +11,5 @@ npm run dev
 
 ## 들어 있는 것
 
-- `hello-react/` — DAY 31 실습 01까지 한 코드 (실습 01에서 씀)
-
-실습 02의 `login-tailwind`는 `cd ..`로 day32 폴더에 올라온 뒤 장표의 명령으로 새로 만듭니다.
+- `hello-react/` — DAY 32 수업의 완성 코드 ① 멤버 카드 (README에 실행 방법을 적어 둠)
+- `login-tailwind/` — DAY 32 수업의 완성 코드 ② 로그인 화면 (README에 실행 방법을 적어 둠)

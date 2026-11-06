@@ -12,7 +12,7 @@ function App() {
 
   // 처음 그려질 때 한 번, 그 뒤 발표자가 바뀔 때마다 브라우저 탭의 제목을 바꿉니다(사이드 이펙트)
   useEffect(() => {
-    document.title = presenter ? `발표 : ${presenter} · 우리 팀 소개` : "우리 팀 소개";
+    document.title = presenter ? `발표 : ${presenter} · 멤버 소개` : "멤버 소개";
   }, [presenter]);
 
   function handleSelect(name) {

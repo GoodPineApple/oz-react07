@@ -1,19 +1,20 @@
-/* 카드 한 장과, 카드를 두 칸씩 놓는 틀 */
-.card-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.profile-card {
+/* 멤버 카드 한 장 — 이 파일의 클래스 이름은 ProfileCard 안에서만 쓰입니다 */
+.card {
   padding: 20px;
   background: #fff;
   border: 1px solid #dde3ea;
   border-radius: 12px;
   text-align: center;
+  word-break: keep-all; /* 한글을 낱말 단위로 줄바꿈 */
 }
 
-.profile-card .avatar {
+/* 오늘의 발표자 카드 — .card에 하나 더 붙입니다 */
+.presenter {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #bfdbfe;
+}
+
+.avatar {
   display: grid;
   place-items: center;
   width: 56px;
@@ -26,29 +27,34 @@
   font-weight: 700;
 }
 
-.profile-card h3 {
+.name {
   margin: 0;
 }
 
-.profile-card .role {
+/* 이름은 그 사람의 페이지로 가는 링크 */
+.name a {
+  color: inherit;
+}
+
+.role {
   margin: 4px 0 8px;
   color: #2563eb;
   font-weight: 700;
 }
 
-.profile-card .count {
+.count {
   color: #5f6b7a;
   font-size: 14px;
 }
 
-.profile-card .buttons {
+.buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
 }
 
-.profile-card button {
+.buttons button {
   padding: 6px 12px;
   white-space: nowrap;
   border: 1px solid #2563eb;
@@ -59,22 +65,6 @@
   cursor: pointer;
 }
 
-.profile-card button:hover {
+.buttons button:hover {
   background: #eff6ff;
-}
-
-.profile-card.is-presenter {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px #bfdbfe;
-}
-
-@media (max-width: 640px) {
-  .card-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* 실습 01 — 이름은 그 사람의 페이지로 가는 링크 */
-.profile-card h3 a {
-  color: inherit;
 }

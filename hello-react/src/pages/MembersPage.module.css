@@ -1,0 +1,44 @@
+/* 멤버 목록 — 역할 버튼과 카드 판 */
+.roleButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.roleButtons button {
+  padding: 6px 16px;
+  border: 1px solid #2563eb;
+  border-radius: 999px;
+  background: #fff;
+  color: #2563eb;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* 고른 역할 버튼 — 파랗게 채웁니다 */
+.roleButtons .selected {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* 모바일 먼저 — 기본은 한 줄에 한 장 */
+.cardList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 창 폭 640px 이상 — 두 장씩 */
+@media (min-width: 640px) {
+  .cardList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 창 폭 1024px 이상 — 네 장씩 */
+@media (min-width: 1024px) {
+  .cardList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

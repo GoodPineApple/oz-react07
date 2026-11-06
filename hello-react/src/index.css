@@ -37,35 +37,12 @@ body {
   font-weight: 700;
 }
 
-/* 실습 01 — 역할 버튼 (고른 버튼은 파랗게 채움) */
-.role-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-
-.role-buttons button {
-  padding: 6px 16px;
-  border: 1px solid #2563eb;
-  border-radius: 999px;
-  background: #fff;
-  color: #2563eb;
-  font: inherit;
-  cursor: pointer;
-}
-
-.role-buttons button.is-active {
-  background: #2563eb;
-  color: #fff;
-}
-
 .site-footer {
   color: #5f6b7a;
   border-top: 1px solid #dde3ea;
 }
 
-/* 실습 01 — 메뉴(지금 주소의 링크에는 NavLink가 active 클래스를 붙임) */
+/* 메뉴(지금 주소의 링크에는 NavLink가 active 클래스를 붙임) */
 .site-nav {
   display: flex;
   gap: 8px;
@@ -84,7 +61,7 @@ body {
   color: #fff;
 }
 
-/* 실습 01 — 버튼처럼 보이는 링크 */
+/* 버튼처럼 보이는 링크 */
 .button-link {
   display: inline-block;
   padding: 6px 16px;
@@ -94,7 +71,7 @@ body {
   text-decoration: none;
 }
 
-/* 실습 01 — 팀원 한 사람 페이지 */
+/* 멤버 한 사람 페이지 */
 .member-detail {
   max-width: 360px;
   padding: 24px;

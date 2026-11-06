@@ -1,12 +1,13 @@
 import { useSearchParams } from "react-router";
 import ProfileCard from "../components/ProfileCard.jsx";
 import { members, roles } from "../data/members.js";
+import styles from "./MembersPage.module.css";
 
-// 팀원 목록(/members) — 고른 역할은 주소의 ?role= 에 둡니다
+// 멤버 목록(/members) — 고른 역할은 주소의 ?role= 에 둡니다
 function MembersPage({ presenter, onSelect }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const role = searchParams.get("role") || "전체";
-  // 보여 줄 팀원은 주소의 role로 계산합니다
+  // 보여 줄 멤버는 주소의 role로 계산합니다
   const visibleMembers =
     role === "전체" ? members : members.filter((member) => member.role === role);
 
@@ -17,12 +18,12 @@ function MembersPage({ presenter, onSelect }) {
 
   return (
     <>
-      <h2>팀원</h2>
-      <div className="role-buttons">
+      <h2>멤버</h2>
+      <div className={styles.roleButtons}>
         {roles.map((item) => (
           <button
             key={item}
-            className={item === role ? "is-active" : ""}
+            className={item === role ? styles.selected : ""}
             onClick={() => handleRole(item)}
           >
             {item}
@@ -30,7 +31,7 @@ function MembersPage({ presenter, onSelect }) {
         ))}
       </div>
 
-      <div className="card-list">
+      <div className={styles.cardList}>
         {visibleMembers.map((member) => (
           <ProfileCard
             key={member.id}
