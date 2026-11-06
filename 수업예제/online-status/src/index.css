@@ -1,0 +1,16 @@
+/* 수업 예제 — React 문서의 useOnlineStatus (모양만 조금) */
+:root {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #1f2933;
+  background: #f3f6fb;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+}
+
+button {
+  padding: 6px 14px;
+  font: inherit;
+}
