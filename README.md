@@ -11,6 +11,5 @@ npm run dev
 
 ## 들어 있는 것
 
-- `hello-react/` — DAY 29 실습 02까지 한 코드 (실습 01에서 씀)
-
-실습 02의 `todo-react`는 `cd ..`로 day30 폴더에 올라온 뒤 장표의 명령으로 새로 만듭니다.
+- `hello-react/` — DAY 30 수업의 완성 코드 ① 멤버 카드 (README에 실행 방법을 적어 둠)
+- `todo-react/` — DAY 30 수업의 완성 코드 ② 할 일 목록 (README에 실행 방법을 적어 둠)

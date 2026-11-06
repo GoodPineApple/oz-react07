@@ -4,7 +4,7 @@ function Footer() {
 
   return (
     <footer className="site-footer">
-      <small>© {year} 오즈 7기 3팀 · 수업용 예시</small>
+      <small>© {year} 오즈 스터디 · 수업용 예시</small>
     </footer>
   );
 }

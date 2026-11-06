@@ -37,6 +37,29 @@ body {
   font-weight: 700;
 }
 
+/* 역할 버튼 (고른 버튼은 파랗게 채움) */
+.role-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.role-buttons button {
+  padding: 6px 16px;
+  border: 1px solid #2563eb;
+  border-radius: 999px;
+  background: #fff;
+  color: #2563eb;
+  font: inherit;
+  cursor: pointer;
+}
+
+.role-buttons button.is-active {
+  background: #2563eb;
+  color: #fff;
+}
+
 .site-footer {
   color: #5f6b7a;
   border-top: 1px solid #dde3ea;
