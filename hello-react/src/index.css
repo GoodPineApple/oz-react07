@@ -37,7 +37,7 @@ body {
   font-weight: 700;
 }
 
-/* 실습 01 — 역할 버튼 (고른 버튼은 파랗게 채움) */
+/* 역할 버튼 (고른 버튼은 파랗게 채움) */
 .role-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -63,4 +63,66 @@ body {
 .site-footer {
   color: #5f6b7a;
   border-top: 1px solid #dde3ea;
+}
+
+/* 메뉴(지금 주소의 링크에는 NavLink가 active 클래스를 붙임) */
+.site-nav {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.site-nav a {
+  padding: 4px 14px;
+  border-radius: 8px;
+  color: #1f2933;
+  text-decoration: none;
+}
+
+.site-nav a.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* 버튼처럼 보이는 링크 */
+.button-link {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 멤버 한 사람 페이지 */
+.member-detail {
+  max-width: 360px;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.member-detail .avatar {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.member-detail h2 {
+  margin: 0;
+}
+
+.member-detail .role {
+  margin: 4px 0 8px;
+  color: #2563eb;
+  font-weight: 700;
 }

@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router";
 import "./ProfileCard.css";
 
-// 팀원 한 사람의 카드 — 응원 수는 카드가, 오늘의 발표자는 App이 기억합니다
-function ProfileCard({ name, role = "팀원", intro, projects = 0, presenter, onSelect }) {
+// 멤버 한 사람의 카드 — 응원 수는 카드가, 오늘의 발표자는 App이 기억합니다
+// 이름을 누르면 그 사람의 페이지(/members/아이디)로 갑니다
+function ProfileCard({ id, name, role = "멤버", intro, projects = 0, presenter, onSelect }) {
   const [cheers, setCheers] = useState(0);
   const isPresenter = presenter === name;   // props로 계산할 수 있는 값은 상태로 두지 않습니다
   // 프로젝트가 없으면 다른 글 — 조건에 따라 보여 줄 것을 고릅니다
@@ -19,7 +21,9 @@ function ProfileCard({ name, role = "팀원", intro, projects = 0, presenter, on
   return (
     <article className={isPresenter ? "profile-card is-presenter" : "profile-card"}>
       <div className="avatar">{name[0]}</div>
-      <h3>{name}</h3>
+      <h3>
+        <Link to={`/members/${id}`}>{name}</Link>
+      </h3>
       <p className="role">{role}</p>
       <p>{intro}</p>
       <p className="count">{projectText} · 응원 {cheers}번</p>

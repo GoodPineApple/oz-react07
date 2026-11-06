@@ -1,11 +1,18 @@
-// 맨 위 — 팀 이름과 오늘의 발표자(App에서 props로 받음)
+import { NavLink } from "react-router";
+
+// 맨 위 — 스터디 이름, 메뉴, 오늘의 발표자(App에서 props로 받음)
 function Header({ presenter }) {
-  const teamName = "오즈 7기 3팀";
+  const siteName = "오즈 스터디";
 
   return (
     <header className="site-header">
-      <h1>{teamName}</h1>
-      <p>랜딩페이지 프로젝트를 함께 만든 사람들입니다.</p>
+      <h1>{siteName}</h1>
+      <nav className="site-nav">
+        <NavLink to="/" end>
+          홈
+        </NavLink>
+        <NavLink to="/members">멤버</NavLink>
+      </nav>
       <p className="presenter">오늘의 발표자 : {presenter || "아직 정하지 않음"}</p>
     </header>
   );

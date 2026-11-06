@@ -4,7 +4,7 @@ Vite로 만든 React 연습 프로젝트입니다. (DAY 27)
 
 ## 실행 방법
 
-Node.js 20.19 이상 또는 22.12 이상이 필요합니다.
+Node.js 22.22 이상이 필요합니다(react-router 8.4.0의 engines `>=22.22.0`).
 만들 때 쓴 판은 Node.js 26.11.1입니다.
 
 ```bash

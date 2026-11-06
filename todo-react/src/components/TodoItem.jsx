@@ -1,4 +1,4 @@
-// 할 일 한 줄 — 체크는 완료, 삭제는 지우기. App이 넘긴 함수로 알립니다
+// 할 일 한 줄 — 체크는 완료, 삭제는 지우기. TodosPage가 넘긴 함수로 알립니다
 function TodoItem({ todo, onToggle, onDelete }) {
   return (
     <li className={todo.done ? "todo-item done" : "todo-item"}>

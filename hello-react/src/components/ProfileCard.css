@@ -73,3 +73,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* 이름은 그 사람의 페이지로 가는 링크 */
+.profile-card h3 a {
+  color: inherit;
+}

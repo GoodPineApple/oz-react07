@@ -11,7 +11,5 @@ npm run dev
 
 ## 들어 있는 것
 
-- `hello-react/` — DAY 30 실습 01까지 한 코드 (실습 01에서 씀)
-- `todo-react/` — DAY 30 실습 02까지 한 코드 (실습 02에서 씀)
-
-실습 02는 `cd ../todo-react`로 옮겨서 다시 `npm install`을 합니다.
+- `hello-react/` — DAY 31 수업의 완성 코드 ① 멤버 소개 페이지 (README에 실행 방법을 적어 둠)
+- `todo-react/` — DAY 31 수업의 완성 코드 ② 로그인과 내 할 일 (README에 실행 방법을 적어 둠)
