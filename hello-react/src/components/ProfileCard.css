@@ -41,6 +41,33 @@
   font-size: 14px;
 }
 
+.profile-card .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.profile-card button {
+  padding: 6px 12px;
+  white-space: nowrap;
+  border: 1px solid #2563eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #2563eb;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-card button:hover {
+  background: #eff6ff;
+}
+
+.profile-card.is-presenter {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #bfdbfe;
+}
+
 @media (max-width: 640px) {
   .card-list {
     grid-template-columns: 1fr;

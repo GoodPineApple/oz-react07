@@ -27,6 +27,16 @@ body {
   font-size: 32px;
 }
 
+.site-header .presenter {
+  display: inline-block;
+  margin: 8px 0 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #e0ecff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
 .site-footer {
   color: #5f6b7a;
   border-top: 1px solid #dde3ea;

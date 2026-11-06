@@ -11,4 +11,4 @@ npm run dev
 
 ## 들어 있는 것
 
-- `hello-react/` — DAY 28 실습 02까지 한 코드
+- `hello-react/` — DAY 29 수업의 완성 코드 (README에 실행 방법을 적어 둠)
