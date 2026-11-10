@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { signOut } from "firebase/auth";
 import {
   addDoc,
   collection,
@@ -11,14 +10,14 @@ import {
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
-import { auth, db } from "./firebase.js";
+import { db } from "./firebase.js";
 
 // 입력 칸의 클래스 — 긴 클래스는 변수에 담아 나눠 적습니다 (LoginForm과 같은 방식)
 const inputClass =
   "min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 " +
   "focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200";
 
-// 로그인한 사람에게 보이는 화면 — 할 일은 Firestore의 users/{내 uid}/todos에 저장합니다
+// 로그인한 사람에게 보이는 화면 — 할 일은 Firestore의 users/{내 uid}/todos에 저장합니다(이메일 · 로그아웃은 Header로 옮김)
 function Home({ user }) {
   const [todos, setTodos] = useState([]); // Firestore에서 받은 내 할 일
   const [text, setText] = useState(""); // 입력 칸의 글
@@ -66,7 +65,6 @@ function Home({ user }) {
   return (
     <div className="w-full md:max-w-sm md:rounded-2xl md:bg-white md:p-8 md:shadow-lg">
       <h2 className="text-xl font-bold">반가워요!</h2>
-      <p className="mt-1 text-sm text-slate-500">{user.email}</p>
 
       <form onSubmit={handleAdd} className="mt-6 flex gap-2">
         <input
@@ -98,14 +96,6 @@ function Home({ user }) {
           </li>
         ))}
       </ul>
-
-      <button
-        type="button"
-        onClick={() => signOut(auth)}
-        className="mt-6 w-full rounded-lg border border-slate-300 py-2.5 font-bold text-slate-700 hover:bg-slate-50"
-      >
-        로그아웃
-      </button>
     </div>
   );
 }
