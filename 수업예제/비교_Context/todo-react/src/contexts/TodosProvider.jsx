@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { TodosContext } from "./TodosContext.js";
 
-// 처음 보여 줄 할 일 — 실습과 같은 셋
+// 처음 보여 줄 할 일 — Redux 판과 같은 셋
 const initialTodos = [
   { id: 1, text: "React 문서 읽기", done: true },
-  { id: 2, text: "실습 02 끝내기", done: false },
-  { id: 3, text: "팀 회의 준비하기", done: false },
+  { id: 2, text: "React 복습하기", done: false },
+  { id: 3, text: "운동하러 가기", done: false },
 ];
 
 // 할 일과 바꾸는 함수를 Context로 나눠 주는 제공자 — DAY 37의 AuthProvider와 같은 모양
