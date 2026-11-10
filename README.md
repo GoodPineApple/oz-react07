@@ -6,20 +6,18 @@
 git clone -b day34 https://github.com/GoodPineApple/oz-react07.git day34
 cd day34/login-tailwind
 npm install
+cp ../../day33/login-tailwind/.env.local .
 npm run dev
 ```
 
 ## 들어 있는 것
 
-- `login-tailwind/` — DAY 33 실습 02까지 한 코드
-- `login-tailwind/firestore.rules` — 실습 02에서 콘솔의 규칙 탭에 붙일 글
+- `login-tailwind/` — DAY 34 수업의 완성 코드 — Firestore에 내 할 일을 적고 · 체크하고 · 지우는 할 일 노트
+- `login-tailwind/firestore.rules` — 콘솔의 규칙 탭에 붙이는 「본인만」 규칙
+- `login-tailwind/firebase.json` — Firebase Hosting 설정(`firebase init hosting`이 만든 것)
 
 ## .env.local 복사
 
-새로 받은 폴더에는 `.env.local`이 없습니다. `day34/login-tailwind` 폴더에서 전날 폴더의 파일을 복사합니다. 파일 탐색기로 복사해도 됩니다.
+새로 받은 폴더에는 `.env.local`이 없습니다. `day34/login-tailwind` 폴더에서 전날 폴더의 파일을 복사합니다(위의 `cp` 줄). 파일 탐색기로 복사해도 됩니다. 어제 `.env.local`을 만들지 못했으면 `.env.example`을 복사해 DAY 33처럼 값을 적습니다.
 
-```bash
-cp ../../day33/login-tailwind/.env.local .
-```
-
-배포를 다시 하려면 같은 자리의 `.firebaserc`도 복사합니다.
+배포에 쓰는 `.firebaserc`(고른 프로젝트 ID)는 사람마다 달라 저장소에 넣지 않았습니다.
