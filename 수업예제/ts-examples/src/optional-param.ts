@@ -6,5 +6,5 @@ function greet(name: string, title?: string): string {
   return `${name}님`;
 }
 console.log(greet("민지")); // 민지님
-console.log(greet("민지", "팀장")); // 팀장 민지님
+console.log(greet("민지", "회원")); // 회원 민지님
 console.log(greet()); // 오류 — name이 없음
