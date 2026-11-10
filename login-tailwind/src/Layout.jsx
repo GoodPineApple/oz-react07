@@ -1,10 +1,18 @@
+import { useContext } from "react";
 import { Outlet } from "react-router";
+import { ThemeContext } from "./ThemeContext.js";
 import Header from "./Header.jsx";
 
+// 페이지 전체의 클래스 — dark: 클래스는 data-theme이 "dark"일 때만 켜집니다(index.css)
+const pageClass =
+  "min-h-screen bg-slate-100 lg:grid lg:grid-cols-2 " +
+  "dark:bg-slate-900 dark:text-slate-100";
+
 // 모든 페이지의 틀 — 모바일은 위아래로 쌓고, 넓은 화면(lg)은 왼쪽 소개 · 오른쪽 페이지 두 칸
-function Layout({ user }) {
+function Layout() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="min-h-screen bg-slate-100 lg:grid lg:grid-cols-2">
+    <div data-theme={theme} className={pageClass}>
       {/* 서비스 소개 — 모바일은 위쪽 띠, lg부터는 왼쪽 절반 */}
       <section className="bg-blue-600 px-6 py-8 text-white lg:flex lg:flex-col lg:justify-center lg:px-16">
         <h1 className="text-2xl font-bold lg:text-4xl">할 일 노트</h1>
@@ -19,8 +27,7 @@ function Layout({ user }) {
 
       {/* 머리말과 지금 주소의 페이지 — md부터는 가운데에 */}
       <main className="px-6 py-10 md:flex md:flex-col md:items-center md:justify-center">
-        {/* Layout은 user를 쓰지 않고 Header에 넘기기만 합니다 */}
-        <Header user={user} />
+        <Header />
         <Outlet />
       </main>
     </div>

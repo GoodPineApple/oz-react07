@@ -5,7 +5,8 @@ import { auth } from "./firebase.js";
 // 입력 칸 둘이 함께 쓰는 클래스 — 긴 클래스는 변수에 담아 나눠 적습니다
 const inputClass =
   "mt-1 block w-full rounded-lg border border-slate-300 bg-white px-3 py-2 " +
-  "focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200";
+  "focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200 " +
+  "dark:border-slate-600 dark:bg-slate-700";
 
 // Firebase 오류 코드를 화면에 보일 글로 — 표에 없는 코드는 코드 그대로 보여 줍니다
 const errorMessages = {
@@ -15,7 +16,7 @@ const errorMessages = {
   "auth/invalid-credential": "이메일 또는 비밀번호가 맞지 않습니다",
 };
 
-// 로그인 · 회원가입 폼 — 성공하면 App의 onAuthStateChanged가 홈 화면으로 바꿉니다
+// 로그인 · 회원가입 폼 — 성공하면 AuthProvider의 onAuthStateChanged가 홈 화면으로 바꿉니다
 function LoginForm() {
   const [mode, setMode] = useState("login"); // "login" 또는 "signup"
   const [email, setEmail] = useState("");
@@ -50,10 +51,10 @@ function LoginForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full md:max-w-sm md:rounded-2xl md:bg-white md:p-8 md:shadow-lg"
+      className="w-full md:max-w-sm md:rounded-2xl md:bg-white md:p-8 md:shadow-lg md:dark:bg-slate-800"
     >
       <h2 className="text-xl font-bold">{isSignup ? "회원가입" : "로그인"}</h2>
-      <label className="mt-6 block text-sm font-bold text-slate-700">
+      <label className="mt-6 block text-sm font-bold text-slate-700 dark:text-slate-200">
         이메일
         <input
           type="email"
@@ -64,7 +65,7 @@ function LoginForm() {
           className={inputClass}
         />
       </label>
-      <label className="mt-4 block text-sm font-bold text-slate-700">
+      <label className="mt-4 block text-sm font-bold text-slate-700 dark:text-slate-200">
         비밀번호
         <input
           type="password"
