@@ -1,6 +1,6 @@
 # 7기 React 수업 코드
 
-수업마다 브랜치 하나에 그날 수업을 시작할 코드가 들어 있습니다. 코드는 main이 아니라 `dayNN` 브랜치에 있습니다.
+수업마다 브랜치 하나에 그날 수업의 완성 코드가 들어 있습니다. 받아서 켜 보고 장표의 코드와 비교합니다. 코드는 main이 아니라 `dayNN` 브랜치에 있습니다.
 
 ## 코드 받기
 
@@ -46,6 +46,7 @@ git clone -b day28 https://github.com/GoodPineApple/oz-react07.git day28-2
 | DAY 33 | Firebase 개요 및 인증 | `day33` |
 | DAY 34 | Firebase 데이터 연동 및 배포 기초 | `day34` |
 | DAY 35 | 상태 흐름 점검 및 인증 연동 강화 | `day35` |
+| DAY 36 | Supabase와 서비스 완성 | `day36` |
 | DAY 37 | Context API와 전역 상태 관리 개념 | `day37` |
 | DAY 38 | Redux Toolkit 최소 실전 | `day38` |
 | DAY 39 | 커스텀 훅과 React 성능 최적화 기초 | `day39` |
@@ -53,4 +54,4 @@ git clone -b day28 https://github.com/GoodPineApple/oz-react07.git day28-2
 | DAY 41 | TypeScript 기초 | `day41` |
 | DAY 42 | React + TypeScript 적용 | `day42` |
 
-DAY 36은 팀 미니 프로젝트 날이라 브랜치가 없습니다.
+`day36` 브랜치는 수업 전에 올립니다.
