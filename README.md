@@ -19,3 +19,4 @@ npm run dev
 
 - `login-tailwind/` — DAY 33 수업의 완성 코드 — 회원가입 · 로그인 · 로그아웃과 로그인 상태 유지
 - `login-tailwind/.env.example` — 값을 비운 틀. 복사해 `.env.local`을 만들고 값을 적습니다. `.env.local`은 git에 올라가지 않으니 다음 수업에 복사해 씁니다.
+- `google-login/` — 다섯째 섹션의 예제 — 같은 로그인 화면에 「Google로 계속하기」 버튼(`signInWithPopup`)을 더한 것. `cd google-login` → `npm install` → `cp .env.example .env.local`(값은 login-tailwind와 같음) → `npm run dev`. 콘솔에서 Google 로그인을 켜고, Authentication의 설정 → 승인된 도메인에 `localhost`를 넣어야 버튼이 됩니다.
