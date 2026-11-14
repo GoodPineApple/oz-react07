@@ -1,0 +1,193 @@
+/* create-vite가 만든 index.css를 이 내용으로 바꿉니다 — 오늘 쓰는 기본 모양 */
+:root {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
+  background: #f3f6fb;
+}
+
+body {
+  margin: 0;
+}
+
+.header,
+.main,
+.footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+/* 머리말 — 이름과 메뉴 */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid #dde3ea;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 메뉴(지금 주소의 링크에는 NavLink가 active 클래스를 붙임) */
+.tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.tabs a {
+  padding: 4px 14px;
+  border-radius: 8px;
+  color: #1f2933;
+  text-decoration: none;
+}
+
+.tabs a.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.footer {
+  color: #5f6b7a;
+  font-size: 14px;
+  border-top: 1px solid #dde3ea;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+a {
+  color: #2563eb;
+}
+
+/* 홈 — 주소 예와 글 번호 칸 */
+.examples {
+  padding-left: 20px;
+}
+
+.examples a {
+  font-family: Menlo, monospace;
+}
+
+.jump {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.jump input {
+  width: 120px;
+  padding: 6px 10px;
+  border: 1px solid #c3ccd8;
+  border-radius: 8px;
+  font: inherit;
+}
+
+/* 버튼 (고른 버튼은 파랗게 채움) */
+button {
+  padding: 6px 14px;
+  border: 1px solid #2563eb;
+  border-radius: 999px;
+  background: #fff;
+  color: #2563eb;
+  font: inherit;
+  cursor: pointer;
+}
+
+.jump button,
+button.is-active {
+  background: #2563eb;
+  color: #fff;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+/* 글 목록 · 작성자 목록 */
+.post-list,
+.user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 12px;
+}
+
+.post-list li,
+.user-list li {
+  padding: 10px 16px;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.post-list li:last-child,
+.user-list li:last-child {
+  border-bottom: none;
+}
+
+.post-list a {
+  color: #1f2933;
+  text-decoration: none;
+}
+
+.post-list .num {
+  display: inline-block;
+  min-width: 32px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.user-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.user-list span {
+  color: #5f6b7a;
+}
+
+/* 글 하나 */
+.meta {
+  margin: 0 0 4px;
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.body {
+  white-space: pre-line;
+}
+
+.comments {
+  padding: 0;
+  list-style: none;
+}
+
+.comments li {
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #dde3ea;
+  border-radius: 10px;
+}
+
+.comments p {
+  margin: 4px 0 0;
+}
+
+.notice {
+  padding: 12px 16px;
+  background: #fff4e5;
+  border: 1px solid #f5c27a;
+  border-radius: 10px;
+}
