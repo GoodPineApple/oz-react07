@@ -53,5 +53,3 @@ git clone -b day28 https://github.com/GoodPineApple/oz-react07.git day28-2
 | DAY 40 | Next.js 기초와 SEO/GEO | `day40` |
 | DAY 41 | TypeScript 기초 | `day41` |
 | DAY 42 | React + TypeScript 적용 | `day42` |
-
-`day36` 브랜치는 수업 전에 올립니다.
