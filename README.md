@@ -1,20 +1,21 @@
-# DAY 41 · TypeScript 기초
+# DAY 41 · TypeScript 기초와 React 적용
 
 수업 시작 전에 `oz-react` 폴더의 터미널에서 칩니다.
 
 ```bash
 git clone -b day41 https://github.com/GoodPineApple/oz-react07.git day41
-cd day41/hello-ts
+cd day41/todo-react
 npm install
-npx tsc
-node dist/cart.js
-node dist/order.js
+npm run build
+npm run dev
 ```
+
+주소는 http://localhost:5173 입니다. 개발 서버를 끄려면 Ctrl + C.
 
 ## 들어 있는 것
 
-- `hello-ts/` — DAY 41 수업의 완성 코드 — DAY 14의 장바구니를 TypeScript로 옮긴 `src/cart.ts`(type CartItem · lineTotal)와 카페 주문의 모양을 union · interface · 선택 속성 · 함수 타입으로 정한 `src/order.ts`. `npx tsc` 로 검사하고 `dist` 에 쓴 .js를 node로 실행합니다.
-- `수업예제/ts-examples/` — 장표의 코드 28개. 일부러 틀린 줄이 있어 `npx tsc --noEmit` 에 오류 17개가 나오는 것이 정상
-- `재료/cart.js` — DAY 14의 장바구니 그대로. 장표의 「이름만 .ts로 바꾼 DAY 14 cart.js의 오류 셋」을 해 보려면 이 파일을 `src/cart.ts` 로 복사해 `npx tsc`
+- `todo-react/` — DAY 41 수업의 완성 코드 — DAY 30의 할 일 앱을 TypeScript로 바꾼 것입니다. Vite react-ts 템플릿의 tsconfig, 할 일의 모양(`src/types.ts` 의 interface Todo), 컴포넌트 props의 interface를 더했습니다. `npm run build` 는 타입 검사(`tsc -b`)를 먼저 하고, 오류가 없으면 `vite build` 로 넘어갑니다. `npm run dev` 는 타입을 검사하지 않습니다.
+- `수업예제/study-blog/` — 공부 노트(DAY 40)를 TypeScript로 옮긴 판(Next.js 16.4.6)입니다. `cd ../수업예제/study-blog` → `npm install` → `npm run dev`(주소 http://localhost:3000).
+- `수업예제/todo-node/` — Node로 돌리는 짧은 예제(`src/todo.ts`)입니다. `cd ../수업예제/todo-node` → `npm install` → `npx tsc`(오류가 없으면 `dist/todo.js` 를 만듦) → `node dist/todo.js`.
 
-오늘은 Firebase를 쓰지 않아 `.env.local` 이 필요 없습니다. 받는 패키지는 typescript 하나입니다.
+오늘은 Firebase를 쓰지 않아 `.env.local` 이 필요 없습니다.
