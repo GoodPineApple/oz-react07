@@ -51,5 +51,5 @@ git clone -b day28 https://github.com/GoodPineApple/oz-react07.git day28-2
 | DAY 38 | Redux Toolkit 최소 실전 | `day38` |
 | DAY 39 | 커스텀 훅과 React 성능 최적화 기초 | `day39` |
 | DAY 40 | Next.js 기초와 SEO/GEO | `day40` |
-| DAY 41 | TypeScript 기초 | `day41` |
-| DAY 42 | React + TypeScript 적용 | `day42` |
+| DAY 41 | TypeScript 기초와 React 적용 | `day41` |
+| DAY 42 | 프론트엔드 최종 정리 | `day42` |
